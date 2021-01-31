@@ -1,7 +1,7 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$secret = require __DIR__ . '/secret.php';
 
 $config = [
     'id' => 'basic-console',
@@ -25,7 +25,13 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => [
+            'class' => 'yii\db\Connection',
+            'dsn' => 'pgsql:host=localhost;dbname=yii2robokassa',
+            'username' => $secret['db.username'],
+            'password' => $secret['db.password'],
+            'charset' => 'utf8',
+        ],
     ],
     'params' => $params,
     /*

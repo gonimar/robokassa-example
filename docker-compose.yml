@@ -7,3 +7,11 @@ services:
       - ./:/app:delegated
     ports:
       - '8000:80'
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: yii2robokassa
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
