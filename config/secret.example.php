@@ -6,4 +6,5 @@ return [
     'robokassa.password2' => '',
     'db.username' => 'postgres',
     'db.password' => 'postgres',
+    'db.dsn' => 'pgsql:host=localhost;dbname=yii2robokassa',
 ];

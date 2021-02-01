@@ -27,7 +27,7 @@ $config = [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'pgsql:host=localhost;dbname=yii2robokassa',
+            'dsn' => $secret['db.dsn'],
             'username' => $secret['db.username'],
             'password' => $secret['db.password'],
             'charset' => 'utf8',
